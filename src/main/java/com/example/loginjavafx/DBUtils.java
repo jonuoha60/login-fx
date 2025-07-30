@@ -57,7 +57,7 @@ public class DBUtils {
     public static void signUpUser(ActionEvent event, String username, String email, String password) {
         String url = "jdbc:mysql://localhost:3306/loginsystems";
         String dbUser = "root";
-        String dbPass = "Ikenna16";
+        String dbPass = "";
 
         String checkSql = "SELECT 1 FROM users WHERE email = ?";
         String insertSql = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)"; // <-- fixed
@@ -96,7 +96,7 @@ public class DBUtils {
     public static void loginUser(ActionEvent event, String email, String password) {
         String url = "jdbc:mysql://localhost:3306/loginsystems";
         String dbUser = "root";
-        String dbPass = "Ikenna16";
+        String dbPass = "";
 
         String sql = "SELECT username, password FROM users WHERE email = ?";
 
